@@ -1,17 +1,41 @@
-# Technology Stack
+![image](./src/img/image.png)
 
-1. You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+# DrumPad Machine
 
-## Tests
+App construído para um módulo do curso Front End Libraries do freeCodeCamp
 
--   [x] I should be able to see an outer container with a corresponding **id="drum-machine"** that contains all other elements
+## Uso
 
--   [x] Within #drum-machine I can see an element with corresponding **id="display"**.
+Opcionalmente, você não precisa instalar. Pode ir à uma versão simplificada no CodePen: https://codepen.io/maykopr/full/WNLbdmR
 
--   [x] Within #drum-machine I can see 9 clickable "drum pad" elements, each with a class name of **"drum-pad",** a unique id that describes the audio clip the drum pad will be set up to trigger, and an inner text that corresponds to one of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. The drum pads MUST be in this order.
+Mas caso queira baixar e instalar:
 
--   [x] Within each .drum-pad, there should be an HTML5 <audio> element which has a src attribute pointing to an audio clip, a class name of "clip", and an id corresponding to the inner text of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
+1. Tenha certeza que você tem o Node e o Git instalado.
+2. Clone este repositório usando `git clone https://github.com/Maykopr/drumpad-machine-freecodecamp`
+3. Vá para o diretório raiz `cd <caminho-da-pasta>`
+4. Rode o comando `npm install` para instalar todas as dependências.
+5. Rode o comando `npm run dev` para ter um preview, ou utilize qualquer dos scripts Vite no package.json.
 
-1. When I click on a .drum-pad element, the audio clip contained in its child <audio> element should be triggered.
-1. When I press the trigger key associated with each .drum-pad, the audio clip contained in its child <audio> element should be triggered (e.g. pressing the Q key should trigger the drum pad which contains the string "Q", pressing the W key should trigger the drum pad which contains the string "W", etc.).
-1. When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).105ms
+## Construído com
+
+![GIT](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+![Node.Js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)
+
+## Autor
+
+[Mayko Costa](https://github.com/Maykopr)
+
+![Meu-LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+![Meu-E-mail](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)
+
+## Licensa
+
+This project is licensed under the MIT licence
