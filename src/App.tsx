@@ -44,7 +44,7 @@ const App = () => {
 				setDisplay(`Volume: ${Math.round(newVolume * 100)}`);
 				setTimeout(() => {
 					setDisplay(String.fromCharCode(160));
-				}, 1000);
+				}, 2000);
 			}
 		},
 		[power]

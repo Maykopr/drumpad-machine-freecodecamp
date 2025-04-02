@@ -3,10 +3,6 @@ type ControlButtonProps = {
 	click: () => void;
 };
 
-type ControlPadProps = {
-	children: React.ReactNode;
-};
-
 type ControlDisplayProps = {
 	display: string;
 };
@@ -25,10 +21,6 @@ function ControlButton({ label, click }: ControlButtonProps) {
 	);
 }
 
-const ControlPad = ({ children }: ControlPadProps) => {
-	return <div className="controls-container">{children}</div>;
-};
-
 function ControlDisplay({ display }: ControlDisplayProps) {
 	return (
 		<div id="display" className="display">
@@ -45,4 +37,4 @@ function ControlVolume({ sliderValue, adjustVolume }: ControlVolumeProps) {
 	);
 }
 
-export { ControlButton, ControlPad, ControlDisplay, ControlVolume };
+export { ControlButton, ControlDisplay, ControlVolume };
