@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+/* Remover estilos padrão de listas */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Remover estilos padrão de links */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Melhor base para tipografia */
+body {
+	font-family: var(--font-family1);
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--gray-900, --dark);
+	background-color: var(--gray-100, --light);
+}
+
+/* Remover estilos padrão de botões e inputs */
+button,
+input,
+textarea,
+select {
+	font: inherit;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+/* Garantir que botões sejam clicáveis */
+button {
+	cursor: pointer;
+}
+
+/* Melhorar acessibilidade de imagens */
+img,
+picture {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Suporte para layouts responsivos */
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	/* COLORS  */
+	/* Panel */
+	--color-font1: var(--light);
+	--color-font2: var(--primary);
+
+	--light: hsl(0, 0%, 100%);
+	--dark: hsl(20, 10%, 0%);
+
+	--success: hsl(90, 73%, 59%);
+	--warning: hsl(50, 73%, 59%);
+	--danger: hsl(20, 73%, 59%);
+
+	--primary: hsl(268, 70%, 40%);
+	--primary-hue: 268;
+	--primary-saturation: 70%;
+	--primary-dark: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+	--primary-light: hsl(var(--primary-hue), calc(var(--primary-saturation) - 10%), 57%);
+
+	--secondary: hsl(20, 84%, 48%);
+	--secondary-hue: 20;
+	--secondary-saturation: 90%;
+	--secondary-dark: hsl(var(--secondary-hue), var(--secondary-saturation), 40%);
+	--secondary-light: hsl(var(--secondary-hue), var(--secondary-saturation), 65%);
+
+	--tertiary: hsl(178, 87%, 85%);
+	--tertiary-hue: 47;
+	--tertiary-saturation: 78%;
+	--tertiary-dark: hsl(var(--tertiary-hue), var(--tertiary-saturation), 40%);
+	--tertiary-light: hsl(var(--tertiary-hue), var(--tertiary-saturation), 60%);
+
+	/* Neutrals - Distribuição uniforme na luminosidade */
+	--gray: hsl(210, 10%, 50%);
+	--gray-hue: 210;
+	--gray-saturation: 10%;
+	--gray-900: hsl(var(--gray-hue), var(--gray-saturation), 10%);
+	--gray-800: hsl(var(--gray-hue), var(--gray-saturation), 20%);
+	--gray-700: hsl(var(--gray-hue), var(--gray-saturation), 30%);
+	--gray-600: hsl(var(--gray-hue), var(--gray-saturation), 40%);
+	--gray-500: hsl(var(--gray-hue), var(--gray-saturation), 50%);
+	--gray-400: hsl(var(--gray-hue), var(--gray-saturation), 60%);
+	--gray-300: hsl(var(--gray-hue), var(--gray-saturation), 70%);
+	--gray-200: hsl(var(--gray-hue), var(--gray-saturation), 80%);
+	--gray-100: hsl(var(--gray-hue), var(--gray-saturation), 90%);
+
+	--shadow-newmorph-external: 5px 5px 8px hsla(0, 0%, 0%, 0.2), -5px -5px 8px hsla(0, 0%, 100%, 0.5);
+	--shadow-newmorph-internal: inset 5px 5px 8px hsla(0, 0%, 0%, 0.2), inset -5px -5px 8px hsla(0, 0%, 100%, 0.4);
+	/* SIZES BASED ON VIEWPORT */
+
+	/* DIMENTIONS  */
+
+	--width: clamp(250px, 90vw, 380px);
+	--height: clamp(440px, 90vh, 672px);
+	--ratio1: 1;
+	--ratio2w: 4/3;
+	--ratio3w: 16/9;
+	--ratio4w: 21/9;
+	--ratio2h: 3/4;
+	--ratio3h: 9/16;
+	--ratio4h: 9/21;
+
+	/* SIZES   responsive font sizes @link https://utopia.fyi */
+	--resp-size-xxs: clamp(0.25rem, 0.2283rem + 0.1087cqi, 0.3125rem);
+	--resp-size-xs: clamp(0.5rem, 0.4783rem + 0.1087cqi, 0.5625rem);
+	--resp-size-s: clamp(0.75rem, 0.7065rem + 0.2174cqi, 0.875rem);
+	--resp-size-m: clamp(1rem, 0.9565rem + 0.2174cqi, 1.125rem);
+	--resp-size-l: clamp(1.5rem, 1.4348rem + 0.3261cqi, 1.6875rem);
+	--resp-size-xl: clamp(2.25rem, 2.1413rem + 0.5435cqi, 2.5625rem);
+	--resp-size-xxl: clamp(3rem, 2.8696rem + 0.6522cqi, 3.375rem);
+
+	--container-size-xxs: 2.5cqi;
+	--container-size-xs: 3cqi;
+	--container-size-s: 4cqi;
+	--container-size-m: 5.5cqi;
+	--container-size-l: 7.5cqi;
+	--container-size-xl: 10cqi;
+	--container-size-xxl: 13cqi;
+
+	--em-size-xxs: 0.25em;
+	--em-size-xs: 0.5em;
+	--em-size-s: 0.75em;
+	--em-size-m: 1em;
+	--em-size-l: 1.5em;
+	--em-size-xl: 2.25em;
+	--em-size-xxl: 3em;
+
+	/* Melhor renderização de texto */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: "Oxanium", sans-serif;
+	background-color: var(--gray-100);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	box-shadow: var(--shadow-newmorph-internal);
+}
+
+.app {
+	background-color: var(--gray-100);
+	border-radius: var(--em-size-xs);
+	padding: var(--em-size-s);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: var(--shadow-newmorph-external);
+}
+
+.pad-bank {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--em-size-xs);
+	margin-block: var(--em-size-m);
+}
+
+.drum-pad {
+	background-color: var(--primary);
+	background-image: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
+	border-radius: var(--em-size-xxs);
+	color: var(--color-font1);
+	font-size: var(--em-size-l);
+	text-align: center;
+	text-transform: uppercase;
+	width: 70px;
+	height: 70px;
+	margin: var(--em-size-xxs);
+	border: outset 1px var(--primary-light);
+	cursor: pointer;
+}
+
+.drumpad-container {
+	border-radius: var(--em-size-xs);
+	box-shadow: var(--shadow-newmorph-internal);
+}
+
+@media screen and (hover: hover) {
+	.drum-pad:hover,
+	.control__button:hover,
+	.volume-slider input[type="range"]::-webkit-slider-thumb:hover {
+		filter: brightness(1.3);
+	}
+}
+
+.controls-container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	width: 100%;
+	color: var(--color-font2);
+	gap: var(--em-size-xs);
+}
+
+.control {
+	text-align: center;
+	font-weight: 600;
+}
+
+.control__button {
+	background-color: var(--primary);
+	background-image: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	border: var(--em-size-xxs) solid var(--gray-100);
+	box-shadow: var(--shadow-newmorph-external);
+}
+
+.volume-slider input[type="range"] {
+	padding-bottom: 10px;
+	width: 70px;
+	appearance: none;
+}
+
+.volume-slider input[type="range"]::-webkit-slider-runnable-track {
+	background-color: var(--secondary);
+	width: 100%;
+	height: 12px;
+	border-radius: 5px;
+	box-shadow: var(--shadow-newmorph-internal), var(--shadow-newmorph-external);
+	border: 2px solid var(--gray-100);
+}
+
+.volume-slider input[type="range"]::-webkit-slider-thumb {
+	background-image: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
+	appearance: none;
+	margin-top: -8%;
+	border-radius: 50%;
+	border: 2px solid var(--gray-100);
+	width: 20px;
+	height: 20px;
+	background-color: var(--primary);
+	cursor: pointer;
+	box-shadow: var(--shadow-newmorph-external);
+}
+
+.display {
+	background-color: var(--primary-dark);
+	border-radius: var(--em-size-xs);
+	color: var(--color-font1);
+	font-size: var(--em-size-m);
+	padding: 4px;
+	text-align: center;
+	min-width: 120px;
+	min-height: 2.6rem;
+	box-shadow: var(--shadow-newmorph-external);
+	border: var(--em-size-xxs) solid var(--gray-100);
+	background-image: linear-gradient(135deg, var(--secondary-dark), var(--secondary), var(--secondary-light));
+}
